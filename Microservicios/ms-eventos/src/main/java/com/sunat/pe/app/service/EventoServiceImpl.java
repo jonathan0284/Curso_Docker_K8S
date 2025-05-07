@@ -54,4 +54,10 @@ public class EventoServiceImpl implements IEventoService {
 	public void eliminar(Long id) {
 		eventoRepository.deleteById(id);
 	}
+
+	@Override
+	public Optional<List<Evento>> obtenerPorCodigo(String codigo) {
+	    return Optional.ofNullable(eventoRepository.findByCodigo(codigo));
+	}
+
 }

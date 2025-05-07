@@ -35,6 +35,15 @@ public class EventoController {
 		return eventoService.obtenerPorId(id).map(ResponseEntity::ok)
 				.orElse(ResponseEntity.notFound().build());
 	}
+	
+	@GetMapping("/{codigo}")
+	public ResponseEntity<Evento> obtenerPorCodigo(@PathVariable String codigo) {
+	    return eventoService.obtenerPorCodigo(codigo)
+	        .filter(eventos -> !eventos.isEmpty()) // Aseguramos que la lista no esté vacía
+	        .map(eventos -> eventos.get(0)) // Tomamos el primer elemento
+	        .map(ResponseEntity::ok)
+	        .orElseGet(() -> ResponseEntity.notFound().build());
+	}
 
 	@PostMapping
 	public ResponseEntity<Evento> crear(@RequestBody Evento evento) {
