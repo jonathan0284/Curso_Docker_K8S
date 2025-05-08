@@ -2,6 +2,7 @@ package com.sunat.pe.app.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,12 +19,8 @@ import com.sunat.pe.app.service.IEventoService;
 @RestController
 @RequestMapping("/eventos")
 public class EventoController {
-
-	private final IEventoService eventoService;
-
-	public EventoController(IEventoService eventoService) {
-		this.eventoService = eventoService;
-	}
+	@Autowired
+	private IEventoService eventoService;
 
 	@GetMapping
 	public ResponseEntity<List<Evento>> listarTodos() {
@@ -34,15 +31,6 @@ public class EventoController {
 	public ResponseEntity<Evento> obtenerPorId(@PathVariable Long id) {
 		return eventoService.obtenerPorId(id).map(ResponseEntity::ok)
 				.orElse(ResponseEntity.notFound().build());
-	}
-	
-	@GetMapping("/{codigo}")
-	public ResponseEntity<Evento> obtenerPorCodigo(@PathVariable String codigo) {
-	    return eventoService.obtenerPorCodigo(codigo)
-	        .filter(eventos -> !eventos.isEmpty()) // Aseguramos que la lista no esté vacía
-	        .map(eventos -> eventos.get(0)) // Tomamos el primer elemento
-	        .map(ResponseEntity::ok)
-	        .orElseGet(() -> ResponseEntity.notFound().build());
 	}
 
 	@PostMapping

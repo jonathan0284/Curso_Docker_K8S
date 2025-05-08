@@ -3,19 +3,16 @@ package com.sunat.pe.app.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.sunat.pe.app.entities.Evento;
 import com.sunat.pe.app.repository.EventoRepository;
 
-@Service
+@Component
 public class EventoServiceImpl implements IEventoService {
-
-	private final EventoRepository eventoRepository;
-
-	public EventoServiceImpl(EventoRepository eventoRepository) {
-		this.eventoRepository = eventoRepository;
-	}
+	@Autowired
+	private EventoRepository eventoRepository;
 
 	@Override
 	public List<Evento> listarTodos() {
@@ -56,8 +53,17 @@ public class EventoServiceImpl implements IEventoService {
 	}
 
 	@Override
-	public Optional<List<Evento>> obtenerPorCodigo(String codigo) {
-	    return Optional.ofNullable(eventoRepository.findByCodigo(codigo));
+	public boolean existePorNombre(String nombre) {
+		return eventoRepository.existsByNombre(nombre);
 	}
 
+	@Override
+	public boolean existePorCodigo(String codigo) {
+		return eventoRepository.existsByCodigo(codigo);
+	}
+
+	@Override
+	public Optional<List<Evento>> obtenerPorCodigo(String codigo) {
+		return Optional.ofNullable(eventoRepository.findAllByCodigo(codigo));
+	}
 }

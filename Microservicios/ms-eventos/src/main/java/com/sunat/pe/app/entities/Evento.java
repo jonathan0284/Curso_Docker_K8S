@@ -7,19 +7,19 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name = "eventos")
+@Table(name = "eventos")
 public class Evento {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, unique = true)
     private String codigo;
-    
+
     @Column(nullable = false, unique = true)
     private String nombre;
 
+    @Column(nullable = false)
     private String descripcion;
 
     @Column(nullable = false)
@@ -29,11 +29,10 @@ public class Evento {
 
     @Column(nullable = false)
     private String ubicacion;
-    
+
     @Column(nullable = false)
     private Integer capacidadMax;
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }
@@ -58,37 +57,35 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
-	public Date getFecha() {
-		return fecha;
-	}
+    public Date getFecha() {
+        return fecha;
+    }
 
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 
-	public String getUbicacion() {
-		return ubicacion;
-	}
+    public String getUbicacion() {
+        return ubicacion;
+    }
 
-	public void setUbicacion(String ubicacion) {
-		this.ubicacion = ubicacion;
-	}
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
 
-	public Integer getCapacidadMax() {
-		return capacidadMax;
-	}
+    public Integer getCapacidadMax() {
+        return capacidadMax;
+    }
 
-	public void setCapacidadMax(Integer capacidadMax) {
-		this.capacidadMax = capacidadMax;
-	}
+    public void setCapacidadMax(Integer capacidadMax) {
+        this.capacidadMax = capacidadMax;
+    }
 
-	public String getCodigo() {
-		return codigo;
-	}
+    public String getCodigo() {
+        return codigo;
+    }
 
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
-	
-	
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
 }
