@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.12-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.sunat.pe</groupId>
 	<artifactId>ms-eventos</artifactId>
@@ -71,7 +71,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -100,5 +99,4 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
-
 </project>
