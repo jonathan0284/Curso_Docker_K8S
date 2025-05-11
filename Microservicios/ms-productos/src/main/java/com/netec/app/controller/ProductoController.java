@@ -1,7 +1,9 @@
 package com.netec.app.controller;
 
-import java.util.List;
+import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,15 +22,22 @@ import com.netec.app.service.IProductoService;
 public class ProductoController {
 
 	private final IProductoService productoService;
+	
+	@Autowired
+    private Environment environment;
 
 	public ProductoController(IProductoService productoService) {
 		this.productoService = productoService;
 	}
-
+		
 	@GetMapping
-	public ResponseEntity<List<Producto>> listarTodos() {
-		return ResponseEntity.ok(productoService.listarTodos());
-	}
+    public Map<String, Object> listarTodos() {
+        return Map.of(
+            "POD_NAME", environment.getProperty("POD_NAME", "Unknown"),   
+            "POD_ID", environment.getProperty("POD_ID", "Unkown"), 
+            "SALUDO", environment.getProperty("config.saludo", "Unknown"),
+            "productos", productoService.listarTodos());
+    }
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Producto> obtenerPorId(@PathVariable Long id) {

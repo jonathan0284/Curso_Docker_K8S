@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 // Observar como la URL apunta ya al microservicio contenedorizado
-@FeignClient(name = "ms-productos", url = "http://ms-productos:9081")
+//@FeignClient(name = "ms-productos", url = "http://ms-productos:9081")
+@FeignClient(name = "ms-productos")
 public interface ProductoFeignClient {
 
 	@GetMapping("/productos/{id}")

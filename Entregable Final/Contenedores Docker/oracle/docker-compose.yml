@@ -1,0 +1,30 @@
+services:
+  dki-oradb:
+    image: container-registry.oracle.com/database/express:21.3.0-xe
+    hostname: dki-oradb
+    container_name: dki-oradb	
+    environment:
+      ORACLE_PWD: "dkpassword"
+      ORACLE_SID: "XEPDB1"
+      ORACLE_PDB: "XEPDB1"
+      SYSDBA_USER: "sys"
+      SYSDBA_PASSWORD: "dkpasswords"
+      DKUSER: "dkuser"
+      DKUSER_PASSWORD: "dkpassword"
+      ORACLE_CHARACTERSET: AL32UTF8
+      NLS_LANG: AMERICAN_AMERICA.AL32UTF8
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - dki-volume:/opt/oracle/oradata
+      - ./scripts:/opt/oracle/scripts/startup
+    networks:
+      - dki-network
+      
+volumes:
+  dki-volume:
+
+networks:
+  dki-network:
+    external: true
