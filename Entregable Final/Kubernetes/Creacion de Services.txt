@@ -1,0 +1,48 @@
+Paso 4. Crear Services para ambos microservicios
+Archivo crear:  nano service-ms-eventos.yaml:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-eventos
+spec:
+  selector:
+    app: ms-eventos
+  ports:
+  - protocol: TCP
+    port: 9090 # Puerto interno del servicio
+    targetPort: 9090 # Puerto del contenedor
+    nodePort: 30090 # Puerto expuesto en el nodo
+  type: NodePort
+  
+  
+Archivo nano service-ms-participantes.yaml:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-participantes
+spec:
+  selector:
+    app: ms-participantes
+  ports:
+  - protocol: TCP
+    port: 7075 # Puerto interno del servicio
+    targetPort: 7075 # Puerto del contenedor
+    nodePort: 30075 # Puerto expuesto en el nodo
+  type: NodePort
+  
+ 
+Comandos para aplicar y verificar los Services:
+
+kubectl apply -f service-ms-eventos.yaml
+kubectl apply -f service-ms-participantes.yaml
+
+# Verificación
+kubectl get services
+
+
+
+http://192.168.49.2:30081/
+
+http://192.168.0.101:30090/eventos
