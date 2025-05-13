@@ -1,5 +1,5 @@
 services:
-  dki-oradb:
+  oracle-db:
     image: container-registry.oracle.com/database/express:21.3.0-xe
     hostname: dki-oradb
     container_name: dki-oradb
@@ -38,7 +38,7 @@ services:
     networks:
       - dki-network
     depends_on:
-      dki-oradb:
+      oracle-db:
         condition: service_healthy
     healthcheck:
       test: ["CMD", "curl", "-f", "http://127.0.0.1:9090/eventos"]
@@ -59,7 +59,7 @@ services:
     networks:
       - dki-network
     depends_on:
-      dki-oradb:
+      oracle-db:
         condition: service_healthy
       ms-eventos:
         condition: service_healthy
