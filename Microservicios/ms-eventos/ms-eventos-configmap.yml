@@ -2,11 +2,31 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ms-eventos-configmap
+  namespace: default
 data:
-  APP_NAME: ms-eventos
-  SERVER_PORT: "9090"
-  DB_URL: jdbc:oracle:thin:@oracle-db-service:1521/XEPDB1
-  DB_DRIVER: oracle.jdbc.OracleDriver
-  JPA_DDL_AUTO: update
-  JPA_SHOW_SQL: "true"
-  HIBERNATE_DIALECT: org.hibernate.dialect.OracleDialect
+  application.yml: |
+    spring:
+      application:
+        name: ms-eventos
+      datasource:
+        url: jdbc:oracle:thin:@oracle-db-service:1521/XEPDB1
+        username: ${DB_USERNAME}
+        password: ${DB_PASSWORD}
+        driver-class-name: oracle.jdbc.OracleDriver
+    server:
+      port: 9090
+    management:
+      endpoints:
+        web:
+          exposure:
+            include: "*"
+      endpoint:
+        health:
+          show-details: always
+          probes:
+            enabled: true
+      health:
+        livenessState:
+          enabled: true
+        readinessState:
+          enabled: true

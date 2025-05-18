@@ -24,16 +24,15 @@ public class EventoController {
 	private IEventoService eventoService;
 
 	@Autowired
-    private Environment environment;
-	
+	private Environment environment;
+
 	@GetMapping
-    public Map<String, Object> listarTodos() {
-        return Map.of(
-            "POD_NAME", environment.getProperty("POD_NAME", "Unknown"),   
-            "POD_ID", environment.getProperty("POD_ID", "Unkown"), 
-            "SALUDO", environment.getProperty("config.saludo", "Unknown"),
-            "productos", eventoService.listarTodos());
-    }
+	public Map<String, Object> listarTodos() {
+		return Map.of(
+				"POD_NAME", environment.getProperty("POD_NAME", "Unknown"),
+				"POD_ID", environment.getProperty("POD_ID", "Unkown"),
+				"eventos", eventoService.listarTodos());
+	}
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Evento> obtenerPorId(@PathVariable Long id) {
