@@ -1,0 +1,37 @@
+Paso 1. Crear Dockerfile para ms-participantes
+==============================================
+FROM openjdk:21-jdk-slim
+WORKDIR /app
+COPY target/ms-participantes-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 7075
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+Paso 2. Crear Dockerfile para ms-eventos
+========================================
+FROM openjdk:21-jdk-slim
+WORKDIR /app
+COPY target/ms-eventos-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 9090
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+Paso 3. Comando para compilar los Microservicios
+=============================
+.\mvnw clean install
+
+Paso 4. Crear las imágenes Docker
+======================================
+docker build -t ms-eventos:1.5 .
+docker build -t ms-participantes:1.5 .
+
+Paso 5. Crear y levantar los contenedores
+=========================================
+docker run -d --name ms-participantes --network dki-network -p 7075:7075 ms-participantes:1.5
+docker run -d --name ms-eventos --network dki-network -p 9090:9090 ms-eventos:1.5
+
+Paso 6. Subir Imagenes a Docker HUB
+===========================
+docker tag ms-participantes:1.5 jonathan0284/trabajo-final:ms-participantes-1.5
+docker push jonathan0284/trabajo-final:ms-participantes-1.5
+
+docker tag ms-eventos:1.5 jonathan0284/trabajo-final:ms-eventos-1.5
+docker push jonathan0284/trabajo-final:ms-eventos-1.5
