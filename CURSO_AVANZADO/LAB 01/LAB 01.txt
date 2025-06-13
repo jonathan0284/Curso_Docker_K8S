@@ -1,0 +1,19 @@
+winget install Helm.Helm
+
+helm uninstall ms-email
+
+Crear las imágenes Docker
+=====================
+docker build -t ms-eventos:1.5 .
+docker build -t ms-participantes:1.5 .
+docker build -t img_email:V1 .
+
+Crear y levantar los contenedores
+==========================
+docker run -d --name ms-eventos --network dki-network -p 9090:9090 ms-eventos:1.5
+
+Subir Imagenes a Docker HUB
+===========================
+docker tag img_email:V1 jonathan0284/img_email:V1
+docker push jonathan0284/img_email:V1
+

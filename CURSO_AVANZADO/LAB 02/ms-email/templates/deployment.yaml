@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: ms-email
+spec:
+ replicas: 
+ selector:
+   matchLabels:
+     app: ms-email
+ template:
+   metadata:
+     labels:
+       app: ms-email
+   spec:
+     containers:
+       - name: ms-email
+         image: {{.Values.image.repository}}
+         ports:
+           - containerPort: 8081

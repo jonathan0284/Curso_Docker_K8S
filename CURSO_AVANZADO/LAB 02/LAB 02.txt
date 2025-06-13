@@ -1,0 +1,10 @@
+LAB 02
+
+kubectl get pods
+kubectl get svc
+
+kubectl port-forward pod/ms-email-857fcb8976-p5kdt 8081:8081
+kubectl port-forward svc/ms-email-service 8081:8081
+
+
+minikube service ms-email-service
