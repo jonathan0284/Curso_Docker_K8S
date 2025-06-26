@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Práctica 5. Múltiples contenedores | DOCK_KUB_AVA</title>
+<meta name="generator" content="Jekyll v3.10.0">
+<meta property="og:title" content="Práctica 5. Múltiples contenedores">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="index.htm">
+<meta property="og:url" content="https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo5/">
+<meta property="og:site_name" content="DOCK_KUB_AVA">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Práctica 5. Múltiples contenedores">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Práctica 5. Múltiples contenedores","url":"https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo5/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="../assets/css/style.css?v=59c4f307869c73b2d11aec7c66bb9b0ff02cf6ee">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/DOCK_KUB_AVA/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="../index.htm">DOCK_KUB_AVA</a></h1>
+      
+
+      <h1 id="práctica-5-múltiples-contenedores">Práctica 5. Múltiples contenedores</h1>
+
+<h2 id="objetivo-del-laboratorio">Objetivo del laboratorio:</h2>
+<p>Al finalizar la práctica, serás capaz de:</p>
+<ul>
+  <li>Crear un manifiesto en Kubernetes para desplegar múltiples servicios dentro de un mismo pod.</li>
+  <li>Configurar y desplegar dos bases de datos (MySQL y PostgreSQL) en un único manifiesto YAML.</li>
+</ul>
+
+<h2 id="objetivo-visual">Objetivo visual</h2>
+
+<p>Desplegar un pod en Kubernetes que aloje dos bases de datos configuradas y funcionales.</p>
+
+<p><img src="../images/Capitulo2/cap2_obt_final.png" alt="diagrama1"></p>
+
+<h2 id="duración-aproximada">Duración aproximada:</h2>
+<ul>
+  <li>45 minutos.</li>
+</ul>
+
+<h2 id="instrucciones">Instrucciones</h2>
+<h3 id="tarea-1-creando-manifiesto">Tarea 1. Creando manifiesto</h3>
+
+<p>Paso 1. Crear el <code class="language-plaintext highlighter-rouge">lab5.yaml</code>. Definir un manifiesto YAML que describa un pod con dos contenedores: uno para MySQL y otro para PostgreSQL. Configurar las variables de entorno necesarias para ambas bases de datos y especificar los puertos expuestos.</p>
+
+<h3 id="yaml">YAML</h3>
+<pre><code class="language-YAML">apiVersion: v1
+kind: Pod
+metadata:
+  name: db-pod
+  labels:
+    app: db-app
+spec:
+  containers:
+    - name: mysql-container
+      image: mysql:latest
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "rootpassword"
+      ports:
+        - containerPort: 3306
+
+
+    - name: postgres-container
+      image: postgres:latest
+      env:
+        - name: POSTGRES_DB
+          value: "mydatabase"
+        - name: POSTGRES_USER
+          value: "myuser"
+        - name: POSTGRES_PASSWORD
+          value: "mypassword"
+      ports:
+        - containerPort: 5432
+</code></pre>
+
+<h3 id="tarea-2-desplegar-múltiples-contenedores">Tarea 2. Desplegar múltiples contenedores</h3>
+
+<p>Paso 1. Ejecutar el comando para crear los múltiples contenedores. Utilizar el siguiente comando para aplicar el manifiesto y crear el pod que contiene los dos contenedores:</p>
+
+<h3 id="shell">shell</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kubectl apply <span class="nt">-f</span> deployment-email.yaml
+</code></pre></div></div>
+
+<p><img src="../images/Capitulo5/Cap5_run_deploy.png" alt="diagrama1"></p>
+
+<p>Paso 2. Usar el comando <code class="language-plaintext highlighter-rouge">kubectl describe</code> para inspeccionar los detalles del pod y verificar que los contenedores se hayan creado correctamente:</p>
+
+<p><img src="../images/Capitulo5/Cap5_run_deploy_1.png" alt="diagrama1"></p>
+
+<h3 id="shell-1">shell</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kubectl describe pod db-pod
+</code></pre></div></div>
+
+<h3 id="nota-importante">NOTA IMPORTANTE</h3>
+
+<p>1 . Si se tarda en crear el contenedor, primero descargar la imagen con el siguiente comando:</p>
+<h3 id="shell-2">shell</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker pull postgres:latest
+</code></pre></div></div>
+
+<ol>
+  <li>Para obtener la IP de los Pods desplegados, utilizar el siguiente comando:</li>
+</ol>
+
+<h3 id="shell-3">shell</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  kubectl port-forward deployment/db-deployment 3306:3306t
+</code></pre></div></div>
+<p><img src="../images/Capitulo5/Cap5_run_deploy_2.png" alt="diagrama1"></p>
+<h3 id="resultado-esperado">Resultado esperado</h3>
+
+<p><img src="../images/Capitulo5/Cap5_esperado.png" alt="diagrama1"></p>
+
+
+      
+    </div>
+    <script src="../../ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

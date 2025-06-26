@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Diagrama arquitectura k8s alta disponibilidad | DOCK_KUB_AVA</title>
+<meta name="generator" content="Jekyll v3.10.0">
+<meta property="og:title" content="Diagrama arquitectura k8s alta disponibilidad">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="index.htm">
+<meta property="og:url" content="https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo4/">
+<meta property="og:site_name" content="DOCK_KUB_AVA">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Diagrama arquitectura k8s alta disponibilidad">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Diagrama arquitectura k8s alta disponibilidad","url":"https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo4/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="../assets/css/style.css?v=59c4f307869c73b2d11aec7c66bb9b0ff02cf6ee">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/DOCK_KUB_AVA/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="../index.htm">DOCK_KUB_AVA</a></h1>
+      
+
+      <h1 id="diagrama-arquitectura-k8s-alta-disponibilidad">Diagrama arquitectura k8s alta disponibilidad</h1>
+
+<h2 id="objetivo-de-la-práctica">Objetivo de la práctica:</h2>
+<p>Al finalizar la práctica, serás capaz de:</p>
+<ul>
+  <li>Comprender como se integran los componentes internos de Kubernetes.</li>
+  <li>Entender como arquitectar un sistema de alta disponibilidad en Kubernetes.</li>
+</ul>
+
+<h2 id="objetivo-visual">Objetivo visual</h2>
+<p>Crear un diagrama de arquitectura de Kubernetes con una alta disponibilidad junto con sus componentes.</p>
+
+<p><img src="../images/Capitulo4/diagrama_k8s.png" alt="imagen resultado"></p>
+
+<h2 id="duración-aproximada">Duración aproximada:</h2>
+<ul>
+  <li>20 minutos.</li>
+</ul>
+
+<h2 id="instrucciones">Instrucciones</h2>
+<p>Para realizar el diagrama de arquitectura de alta disonibilidad se sugiere usar la herramienta online draw.io https://app.diagrams.net/ ya que esta cuenta con una gran variedad de componentes que se van a ajustar a nuestras necesidades.</p>
+
+<h3 id="tarea-1-creacion-cluster-de-alta-disponibilidad">Tarea 1. Creacion Cluster de alta disponibilidad</h3>
+
+<h3 id="nota--en-kubernetes-se-recomienda-usar-un-número-impar-de-nodos-maestros-para-asegurar-consenso-en-el-control-plane-evitar-empates-en-etcd-y-un-número-par-de-nodos-trabajadores-para-balancear-la-carga-de-las-aplicaciones">Nota : En Kubernetes, se recomienda usar un número impar de nodos maestros para asegurar consenso en el control plane (evitar empates en etcd) y un número par de nodos trabajadores para balancear la carga de las aplicaciones.</h3>
+
+<p>Paso 1. Crear el nodo master, el cual tiene la responsabilidad de adminsitrar el clúster y ejecutar los componentes de autogestion de k8s.</p>
+
+<p><img src="../images/Capitulo4/img_1_master.png" alt="imagen resultado"></p>
+
+<p>Paso 2. Crear 3 workers, los cuales tendran la tarea de ejecutar los contenedores y llevar acabo las tareas asignadas por el master. Recuerda que la relación entre master y worker debe ser impar.</p>
+
+<p><img src="../images/Capitulo4/img_2_workers.png" alt="imagen resultado"></p>
+
+<h3 id="tarea-2-añadir-componentes-internos-que-utiliza-k8s-en-los-master">Tarea 2. Añadir componentes internos que utiliza k8s en los master</h3>
+<p>Paso 1. Agregar en el master el componente <strong>DB-ETCD</strong>, el cual tiene la responsabilidad de almacenar y replicar el estado del clúster, incluyendo la configuración, metadatos y datos clave-valor, garantizando consistencia y alta disponibilidad.</p>
+
+<p><img src="../images/Capitulo4/img_3_DB-ETCD.png" alt="imagen resultado"></p>
+
+<p>Paso 2.
+Agregar en el master el componente <strong>kube-controller-manager</strong>, el cual tiene la responsabilidad de gestionar los controladores que regulan el estado deseado del clúster: como la replicación de pods, la gestión de nodos y la reconciliación de recursos.</p>
+
+<p><img src="../images/Capitulo4/img_4_kube-controller-manager.png" alt="imagen resultado"></p>
+
+<p>Paso 3. Crear en el master el componente <strong>kube-scheduler</strong>, el cual tiene la responsabilidad de asignar los pods recién creados a los nodos disponibles, evaluando recursos, afinidad, tolerancias y restricciones.</p>
+
+<p><img src="../images/Capitulo4/img_5_kube-scheduler.png" alt="imagen resultado"></p>
+
+<p>Paso 4. Crear en el master el componente <strong>kube-apiserver</strong>, el cual tiene la responsabilidad de actuar como punto central de comunicación en Kubernetes, gestionando las peticiones de los usuarios y otros componentes. Interactúa con DB-ETCD para leer y almacenar el estado del clúster, con kube-controller-manager para ejecutar controladores y con kube-scheduler para coordinar la asignación de pods a los nodos.</p>
+
+<p><img src="../images/Capitulo4/img_6_kube-apiserver.png" alt="imagen resultado"></p>
+
+<h3 id="tarea-3-componentes-en-el-worker">Tarea 3. componentes en el worker</h3>
+
+<p>Paso 1. Crear en el worker el componente <strong>kubectl</strong>, el cual tiene la responsabilidad de actuar como la interfaz de línea de comandos para interactuar con el clúster, permitiendo gestionar recursos, verificar el estado y enviar comandos al API server desde cualquier máquina autorizada.</p>
+
+<p><img src="../images/Capitulo4/img_7_kubectl.png" alt="imagen resultado"></p>
+
+<p>Paso 2. Crear en el worker el componente <strong>kube-proxy</strong>, el cual tiene la responsabilidad de gestionar las reglas de red y la comunicación dentro del clúster, asegurando el acceso a los servicios y el balanceo de carga entre los pods.</p>
+
+<p><img src="../images/Capitulo4/img_8_kube-proxy.png" alt="imagen resultado"></p>
+
+<h3 id="resultado-esperado">Resultado esperado</h3>
+
+<p><img src="../images/Capitulo4/diagrama_k8s.png" alt="imagen resultado"></p>
+
+
+      
+    </div>
+    <script src="../../ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

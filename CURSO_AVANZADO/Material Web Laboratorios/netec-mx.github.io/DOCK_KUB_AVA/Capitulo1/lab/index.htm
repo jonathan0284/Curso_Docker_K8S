@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Práctica 1.1 Creación de servicio ECS | DOCK_KUB_AVA</title>
+<meta name="generator" content="Jekyll v3.10.0">
+<meta property="og:title" content="Práctica 1.1 Creación de servicio ECS">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="index.htm">
+<meta property="og:url" content="https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo1/lab/">
+<meta property="og:site_name" content="DOCK_KUB_AVA">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Práctica 1.1 Creación de servicio ECS">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Práctica 1.1 Creación de servicio ECS","url":"https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo1/lab/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="../../assets/css/style.css?v=59c4f307869c73b2d11aec7c66bb9b0ff02cf6ee">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/DOCK_KUB_AVA/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="../../index.htm">DOCK_KUB_AVA</a></h1>
+      
+
+      <h1 id="práctica-11-creación-de-servicio-ecs">Práctica 1.1 Creación de servicio ECS</h1>
+
+<h2 id="objetivo-del-laboratorio">Objetivo del laboratorio:</h2>
+<p>Al finalizar la práctica, serás capaz de:</p>
+<ul>
+  <li>Crear un chart personalizable con Helm.</li>
+  <li>Desplegar un microservicio utilizando Helm, configurando correctamente los manifiestos necesarios.</li>
+</ul>
+
+<h2 id="objetivo-visual">Objetivo visual:</h2>
+<p>Diseñar y desplegar un chart Helm que permita gestionar el microservicio de correos electrónicos de manera eficiente y reutilizable.
+<img src="../../images/lab_email_with_Helm.png" alt="diagrama1"></p>
+
+<h2 id="duración-aproximada">Duración aproximada:</h2>
+<ul>
+  <li>30 minutos.</li>
+</ul>
+
+<h2 id="instrucciones">Instrucciones</h2>
+
+<h3 id="tarea-1-creación-de-un-chart">Tarea 1. Creación de un chart</h3>
+<p>Paso 1. Crear una nueva carpeta vacía con el nombre LAB.</p>
+
+<p>Paso 2. Abrir la carpeta LAB en Visual Studio Code.</p>
+
+<p>Paso 3. Ejecutar el comando <code class="language-plaintext highlighter-rouge">helm create ms-email</code> para generar automáticamente la estructura básica del chart. Este comando crea carpetas preconfiguradas que facilitan la personalización del despliegue.</p>
+
+<h3 id="shell">shell</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm create ms-email
+</code></pre></div></div>
+
+<p><img src="../../images/LAB_CREACION_CHART.png" alt="diagrama1"></p>
+
+<h3 id="tarea-2-modificar-el-manifiesto-valuesyaml">Tarea 2. Modificar el manifiesto values.yaml</h3>
+
+<p>Personalizar los valores por defecto del chart para definir las réplicas, la imagen del contenedor y el puerto del servicio.</p>
+
+<p>Paso 1. Abrir el archivo <code class="language-plaintext highlighter-rouge">values.yaml</code>.</p>
+
+<p>Paso 2. Crear una sola replica del servicio <code class="language-plaintext highlighter-rouge">replicaCount = 1</code>.</p>
+
+<p>Paso 3. Especificar los valores para la imagen del contenedor, tipo de servicio y puertos:</p>
+<h3 id="yaml">YAML</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>replicaCount: 1
+
+image:
+ repository: daniel0223/netec_email
+ tag: latest
+ pullPolicy: IfNotPresent
+
+
+service:
+ type: NodePort
+ port: 8081
+
+
+containerPort: 8081
+</code></pre></div></div>
+
+<h3 id="tarea-3-modificar-el-manifiesto-deploymentyaml">Tarea 3. Modificar el manifiesto deployment.yaml</h3>
+
+<p>Configurar el manifiesto de despliegue (deployment.yaml) para utilizar los valores definidos en values.yaml.</p>
+
+<p>Paso 1. Abrir el archivo templates/deployment.yaml y ajustarlo.</p>
+
+<p>Paso 2. Ajustar la configuración de despliegue para utilizar los parámetros definidos:</p>
+<h3 id="yaml-1">YAML</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: -ms-email
+spec:
+ replicas: 
+ selector:
+   matchLabels:
+     app: -ms-email
+ template:
+   metadata:
+     labels:
+       app: -ms-email
+   spec:
+     containers:
+       - name: ms-email
+         image: ":"
+         ports:
+           - containerPort: 
+</code></pre></div></div>
+
+<h3 id="tarea-4-modificar-el-manifiesto-serviceyaml">Tarea 4. Modificar el manifiesto service.yaml</h3>
+
+<p>Configurar el servicio <code class="language-plaintext highlighter-rouge">(service.yaml)</code> para exponer el microservicio y definir el acceso desde el clúster.</p>
+
+<p>Paso 1. Abrir el archivo <code class="language-plaintext highlighter-rouge">templates/service.yaml</code>.</p>
+
+<p>Paso 2. Configurar el servicio para usar un puerto accesible desde fuera del clúster.</p>
+<h3 id="yaml-2">YAML</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># templates/service.yaml
+
+
+apiVersion: v1
+kind: Service
+metadata:
+ name: -ms-email
+spec:
+ type: 
+ ports:
+   - port: 
+     targetPort: 
+     nodePort: 30081  # Puedes especificar el NodePort o dejar que Kubernetes lo asigne.
+ selector:
+   app: -ms-email
+</code></pre></div></div>
+<h3 id="tarea-5-desplegar-el-chart">Tarea 5. Desplegar el chart</h3>
+
+<p>Realizar el despliegue del microservicio utilizando Helm y verificar que se haya implementado correctamente.</p>
+
+<p>Paso 1. Dirigirse a la ruta donde se encuentra el chart ms-email y ejecutar el comando para instalar el chart.</p>
+
+<h3 id="shell-1">shell</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> helm <span class="nb">install </span>ms-email ./ms-email
+</code></pre></div></div>
+
+<p><img src="../../images/LAB_INSTALL.png" alt="imagen resultado"></p>
+
+<p>Paso 1. Validar que el despliegue se completó correctamente verificando los recursos creados.</p>
+
+<h3 id="shell-2">shell</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kubectl get deployments
+</code></pre></div></div>
+
+<p><img src="../../images/lab_validar_deploryment.png" alt="imagen resultado"></p>
+
+<h3 id="resultado-esperado">Resultado esperado</h3>
+<p><img src="../../images/LAB_INSTALL.png" alt="imagen resultado"></p>
+
+
+      
+    </div>
+    <script src="../../../ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

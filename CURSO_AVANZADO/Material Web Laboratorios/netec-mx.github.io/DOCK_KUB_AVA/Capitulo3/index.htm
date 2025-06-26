@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Práctica 3. Microservicio Seguridad | DOCK_KUB_AVA</title>
+<meta name="generator" content="Jekyll v3.10.0">
+<meta property="og:title" content="Práctica 3. Microservicio Seguridad">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="index.htm">
+<meta property="og:url" content="https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo3/">
+<meta property="og:site_name" content="DOCK_KUB_AVA">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Práctica 3. Microservicio Seguridad">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Práctica 3. Microservicio Seguridad","url":"https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="../assets/css/style.css?v=59c4f307869c73b2d11aec7c66bb9b0ff02cf6ee">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/DOCK_KUB_AVA/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="../index.htm">DOCK_KUB_AVA</a></h1>
+      
+
+      <h1 id="práctica-3-microservicio-seguridad">Práctica 3. Microservicio Seguridad</h1>
+
+<h2 id="objetivo-de-la-práctica">Objetivo de la práctica:</h2>
+<p>Al finalizar la práctica, serás capaz de:</p>
+<ul>
+  <li>Crear un microservicio dedicado a la seguridad, permitiendo la creación de usuarios.</li>
+  <li>Implementar el manejo de JWT (JSON Web Tokens) para autenticación.</li>
+  <li>Configurar un microservicio basado en Spring Security con gestión de usuarios utilizando una base de datos en memoria.</li>
+</ul>
+
+<h2 id="duración-aproximada">Duración aproximada:</h2>
+<ul>
+  <li>80 minutos.</li>
+</ul>
+
+<h3 id="tarea-1-creacion-de-microservicio">Tarea 1. Creacion de microservicio</h3>
+
+<p>Configurar un proyecto Spring Boot que implemente las funcionalidades de seguridad necesarias para gestionar usuarios y autenticar mediante JWT.</p>
+
+<p>Paso 1. Acceder al enlace https://start.spring.io/ y generar un proyecto con las dependencias necesarias, como Spring Web, Spring Security y Spring Data JPA.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_1.png" alt="diagrama1"></p>
+
+<p>Paso 2. Añadir las dependencias de JWT necesarias para manejar la creación y validación de tokens.</p>
+
+<p>La dependencia io.jsonwebtoken permite la creación, firma y validación de tokens JWT, los cuales se utilizan comúnmente para la autenticación y autorización en aplicaciones. Con esta librería, es posible generar tokens que contienen información cifrada (claims) y validar su integridad para garantizar que no hayan sido manipulados. Esto facilita implementar mecanismos seguros de acceso a recursos protegidos.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_2.png" alt="diagrama1"></p>
+
+<p>Paso 3. Organizar el proyecto en paquetes, por ejemplo: entity, repository, security, service, controller, y dto.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_3.png" alt="diagrama1"></p>
+
+<p>Paso 4. Definir una clase de entidad que represente a los usuarios en el sistema, con atributos como username, password, y roles.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_4.png" alt="diagrama1"></p>
+
+<p>Paso 5. Implementar un repositorio para manejar operaciones de persistencia relacionadas con la entidad AuthUser.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_5.png" alt="diagrama1"></p>
+
+<p>Paso 6. AuthUserDto representará los datos del usuario que serán enviados entre el cliente y el servidor.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_6.png" alt="diagrama1"></p>
+
+<p>Paso 7. TokenDto contendrá los datos necesarios para solicitudes como el inicio de sesión.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_7.png" alt="diagrama1"></p>
+
+<p>Paso 8. Definir un PasswordEncoder para gestionar el cifrado de contraseñas.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_8.png" alt="diagrama1"></p>
+
+<p>Paso 9. Implementar validaciones de rutas para verificar permisos según los roles del usuario.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_9.png" alt="diagrama1"></p>
+
+<p>Paso 10. Crear la clase RouteValidation en el package security.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_10.png" alt="diagrama1"></p>
+
+<p>Paso 11. Crear la clase <strong>JwtProvider</strong> como componente de Spring para gestionar los tokens JWT. Incluir una clave secreta (Key secret) para firmar y validar los tokens, de igual manera, utilizar el componente RouteValidator para verificar rutas protegidas, garantizando una seguridad robusta en la aplicación.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_11.png" alt="diagrama1"></p>
+
+<p>Paso 12. La clase <strong>JwtProvider</strong> es un componente encargado de gestionar los tokens JWT en la aplicación. Utilizar una clave secreta para firmar y validar los tokens y el componente RouteValidator para verificar rutas protegidas, garantizando un control de acceso seguro.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_12.png" alt="diagrama1"></p>
+
+<p>Paso 13. Agregar un método en la clase JwtProvider para convertir un objeto LocalDateTime a un objeto Date. El método <strong>convertToLocalDateTimeToDate</strong> utiliza la zona horaria del sistema (ZoneId.systemDefault()) y transforma el <strong>LocalDateTime</strong> en un instante que luego se convierte en un objeto Date.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_13.png" alt="diagrama1"></p>
+
+<p>Paso 14. Implementar el método <strong>createToken</strong> en la clase <strong>JwtProvider</strong> para generar tokens JWT basados en los datos del usuario (AuthUser). Este método permitirá autenticar y autorizar usuarios de forma segura en el sistema.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_14.png" alt="diagrama1"></p>
+
+<p>Paso 15. Inicializar la clave secreta (secret) en JwtProvider tras la creación del componente, generando una clave HMAC segura de 512 bits para gestionar los tokens JWT.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_15.png" alt="diagrama1"></p>
+
+<p>Paso 16. Ajustar el método <strong>createToken</strong> para incluir información personalizada en el token JWT. Agregar los atributos <strong>id</strong> y <strong>role</strong> del usuario (authUser) a un mapa de reclamaciones (claims), y definir la fecha de inicio del token utilizando LocalDateTime.now().</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_16.png" alt="diagrama1"></p>
+
+<p>Paso 17. Completar el método <strong>createToken</strong> en JwtProvider, agregando id y role del usuario a las claims del token JWT y estableciendo la fecha de inicio con LocalDateTime.now(). Esto asegura que el token incluya información del usuario y una marca de tiempo.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_17.png" alt="diagrama1"></p>
+
+<p>Paso 18. El método <strong>getUserNameFromToken</strong> extrae y valida el nombre de usuario de un token JWT. Utilizar la clave secreta (secret) para verificar la firma del token y extraer su sujeto (subject). En caso de error, retorna un mensaje indicando que el token no es válido.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_18.png" alt="diagrama1"></p>
+
+<p>Paso 19. El método <strong>validate</strong> verifica la validez de un token JWT usando la clave secreta y valida permisos según el objeto RequestDto. Si el token no es válido o los permisos no coinciden, retornar false; de lo contrario, confirmar la autenticidad y permisos con true.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_19.png" alt="diagrama1"></p>
+
+<p>Paso 20. Crear la clase SecurityConfig, anotada con @Configuration y @EnableWebSecurity para habilitar la seguridad web en la aplicación. Incluir un método que define un SecurityFilterChain, deshabilitando la protección CSRF y permitiendo que todas las solicitudes sean accesibles sin autenticación. Esto configura las políticas de seguridad iniciales de la aplicación.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_20.png" alt="diagrama1"></p>
+
+<p>Paso 21. Crear la clase AuthService dentro del paquete <code class="language-plaintext highlighter-rouge">com.auth.service</code>. Esta clase será utilizada para implementar la lógica relacionada con la autenticación en el servicio de autorización de la aplicación. Por ahora, la clase se encuentra vacía, lista para ser desarrollada.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_21.png" alt="diagrama1"></p>
+
+<p>Paso 22. Crear la clase <strong>NewUserDto</strong>, diseñada para manejar los datos de transferencia relacionados con la creación de un nuevo usuario. Utilizar Lombok para reducir el código boilerplate, con anotaciones como @Data para generar getters y setters; @Builder para un patrón de construcción fluido y constructores, con y sin, argumentos gracias a @AllArgsConstructor y @NoArgsConstructor. La clase incluye tres atributos: userName, password y role.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_22.png" alt="diagrama1"></p>
+
+<h3 id="tarea-2-ajuste-controller">Tarea 2. Ajuste controller</h3>
+
+<p>Paso 1. Implementar un método en AuthService que permita guardar usuarios en la base de datos.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_23.png" alt="diagrama1"></p>
+
+<p>Paso 2. Definir un método en AuthService que genere un token JWT al autenticar un usuario válido.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_24.png" alt="diagrama1"></p>
+
+<p>Paso 3. Exponer los endpoints necesarios para las operaciones de autenticación y gestión de usuarios.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_25.png" alt="diagrama1"></p>
+
+<p>Paso 4. El método debe aceptar credenciales de usuario y devolver un token JWT si son válidas. Este endPoint se crea para que el usuario pueda ingresar al backend y si es correcto se retornara el token.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_26.png" alt="diagrama1"></p>
+
+<p>Paso 5. Agregar un endpoint en el controlador para validar si un token JWT sigue siendo válido.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_27.png" alt="diagrama1"></p>
+
+<p>Paso 6. Agregar un endpoint para permitir la creación de nuevos usuarios. Este endpoint es utilizado para crear el usuario en el backend y así poder generar el token cuando se realice el login.</p>
+
+<p><img src="../images/Capitulo3/cap3_ms_seg_28.png" alt="diagrama1"></p>
+
+<h3 id="resultado-esperado">Resultado esperado</h3>
+
+<p>Al finalizar la práctica, tendrás un microservicio funcional que permita:</p>
+
+<ul>
+  <li>Crear usuarios en una base de datos en memoria.</li>
+  <li>Autenticar usuarios utilizando JWT.</li>
+  <li>Exponer endpoints seguros para la gestión de usuarios.</li>
+  <li><img src="../images/Capitulo3/cap3_ms_seg_29.png" alt="diagrama1"></li>
+</ul>
+
+
+      
+    </div>
+    <script src="../../ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

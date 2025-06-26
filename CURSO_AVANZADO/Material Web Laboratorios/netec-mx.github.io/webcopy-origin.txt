@@ -1,0 +1,368 @@
+Uri: https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\ajax\libs\anchor-js\4.1.0\anchor.min.js
+Content Type: application/javascript
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\index.htm
+Content Type: text/html
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/assets/css/style.css?v=59c4f307869c73b2d11aec7c66bb9b0ff02cf6ee
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\assets\css\style.css
+Content Type: text/css
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo1/lab/
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\Capitulo1\lab\index.htm
+Content Type: text/html
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo1/practica1/
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\Capitulo1\practica1\index.htm
+Content Type: text/html
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo2/
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\Capitulo2\index.htm
+Content Type: text/html
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo3/
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\Capitulo3\index.htm
+Content Type: text/html
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo4/
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\Capitulo4\index.htm
+Content Type: text/html
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/Capitulo5/
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\Capitulo5\index.htm
+Content Type: text/html
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_10.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_10.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_11.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_11.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_12.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_12.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_13.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_13.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_14.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_14.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_15.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_15.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_16.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_16.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_2.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_2.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_3.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_3.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_4.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_4.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_5.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_5.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_6.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_6.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_7.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_7.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_8.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_8.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/ECS_9.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\ECS_9.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practca1_docker_1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practca1_docker_1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practca1_docker_2.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practca1_docker_2.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practca1_docker_3.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practca1_docker_3.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practca1_docker_4.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practca1_docker_4.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practca1_docker_5.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practca1_docker_5.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practca1_docker_6.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practca1_docker_6.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practca1_docker_7.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practca1_docker_7.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_application_properties.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_application_properties.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_dockerfile.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_dockerfile.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_gmial.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_gmial.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_gmial_1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_gmial_1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_mvn.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_mvn.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_mvn_2.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_mvn_2.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_objetivo.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_objetivo.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo 1/practica1_token_1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo 1\practica1_token_1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo2/cap2_deploy1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo2\cap2_deploy1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo2/cap2_deploy2.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo2\cap2_deploy2.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo2/cap2_deploy3.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo2\cap2_deploy3.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo2/cap2_manifiesto1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo2\cap2_manifiesto1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo2/cap2_manifiesto2.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo2\cap2_manifiesto2.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo2/cap2_obt_final.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo2\cap2_obt_final.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_10.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_10.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_11.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_11.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_12.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_12.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_13.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_13.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_14.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_14.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_15.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_15.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_16.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_16.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_17.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_17.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_18.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_18.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_19.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_19.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_2.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_2.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_20.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_20.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_21.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_21.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_22.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_22.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_23.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_23.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_24.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_24.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_25.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_25.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_26.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_26.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_27.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_27.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_28.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_28.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_29.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_29.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_3.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_3.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_4.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_4.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_5.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_5.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_6.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_6.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_7.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_7.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_8.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_8.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo3/cap3_ms_seg_9.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo3\cap3_ms_seg_9.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/diagrama_k8s.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\diagrama_k8s.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_1_master.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_1_master.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_2_workers.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_2_workers.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_3_DB-ETCD.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_3_DB-ETCD.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_4_kube-controller-manager.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_4_kube-controller-manager.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_5_kube-scheduler.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_5_kube-scheduler.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_6_kube-apiserver.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_6_kube-apiserver.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_7_kubectl.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_7_kubectl.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo4/img_8_kube-proxy.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo4\img_8_kube-proxy.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo5/Cap5_esperado.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo5\Cap5_esperado.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo5/Cap5_run_deploy.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo5\Cap5_run_deploy.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo5/Cap5_run_deploy_1.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo5\Cap5_run_deploy_1.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/Capitulo5/Cap5_run_deploy_2.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\Capitulo5\Cap5_run_deploy_2.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/LAB_CREACION_CHART.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\LAB_CREACION_CHART.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/lab_email_with_Helm.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\lab_email_with_Helm.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/LAB_INSTALL.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\LAB_INSTALL.png
+Content Type: image/png
+
+Uri: https://netec-mx.github.io/DOCK_KUB_AVA/images/lab_validar_deploryment.png
+File Name: C:\Downloaded Web Sites\netec-mx.github.io\DOCK_KUB_AVA\images\lab_validar_deploryment.png
+Content Type: image/png
+
