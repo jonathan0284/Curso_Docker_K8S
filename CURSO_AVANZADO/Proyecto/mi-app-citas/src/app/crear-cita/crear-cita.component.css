@@ -1,0 +1,21 @@
+.calendario-compacto {
+  width: 220px;
+  font-size: 0.9rem;
+}
+
+.calendario-pequeno {
+  width: 220px;
+  font-size: 0.9rem;
+}
+
+.calendario-compacto .p-inputtext {
+  padding: 0.4rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.botones-centrados {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

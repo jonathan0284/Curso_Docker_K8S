@@ -1,0 +1,23 @@
+<div class="layout-wrapper">
+  <!-- Header -->
+  <div class="header">
+    <h3>Gestión de Citas Médicas</h3>
+  </div>
+
+  <div class="layout-body">
+    <!-- Menú lateral -->
+    <div class="sidebar">
+      <p-panelMenu [model]="menuItems"></p-panelMenu>
+    </div>
+
+    <!-- Sección de contenido central -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2025 Centro Médico - Todos los derechos reservados</p>
+  </div>
+</div>

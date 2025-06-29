@@ -1,0 +1,75 @@
+Paso 1. Crear Dockerfile para ms-citas
+==============================================
+FROM openjdk:21-jdk-slim
+WORKDIR /app
+COPY target/ms-citas-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 9090
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+Paso 2. Comando para compilar los Microservicios
+=============================
+.\mvnw clean install
+
+Paso 3. Crear las imágenes Docker
+======================================
+docker build -t ms-citas:2.0 .
+docker build -t mi-app-citas:2.0 .
+
+
+Paso 4. Crear y levantar los contenedores
+=========================================
+docker run -d --name ms-citas --network dki-network -p 9090:9090 ms-citas:1.5
+
+Paso 5. Subir Imagenes a Docker HUB
+===========================
+docker tag ms-citas:2.0 jonathan0284/trabajo-final:ms-citas-2.0
+docker push jonathan0284/trabajo-final:ms-citas-2.0
+
+docker tag mi-app-citas:2.0 jonathan0284/trabajo-final:mi-app-citas-2.0
+docker push jonathan0284/trabajo-final:mi-app-citas-2.0
+
+
+#Desplegar spring deployment
+kubectl apply -f spring-deployment.yaml
+kubectl apply -f spring-service.yaml
+
+#Eliminar Pods
+kubectl delete deployment ms-citas
+kubectl delete deployment angular-app
+
+
+#Ver logs
+kubectl logs ms-citas-8486d79bbd-qlcp6
+
+
+kubectl delete ingress ms-citas-ingress
+kubectl apply -f ms-citas-ingress.yaml
+
+
+#compilar produccion angular
+ng build --configuration production
+
+
+kubectl apply -f angular-deployment.yaml
+kubectl apply -f angular-service.yaml
+
+
+
+minikube service ms-citas-service --url
+minikube service angular-service --url
+
+
+
+>kubectl get ingress --all-namespaces
+kubectl delete ingress ms-citas-ingress
+
+kubectl delete svc angular-service
+kubectl delete svc ms-citas-service
+
+
+
+# Crear tunnel para pruebas
+minikube tunnel
+
+
+kubectl exec -it angular-app-6f6f48f97d-ftbpc -- curl -v http://ms-citas-service/api/usuarios

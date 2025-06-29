@@ -1,0 +1,68 @@
+<p-card header="Registrar Nueva Cita">
+  <form [formGroup]="formularioCita" (ngSubmit)="guardarCita()">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col-12 p-md-6">
+        <label for="paciente">Paciente</label>
+        <p-dropdown id="paciente" formControlName="paciente" [options]="pacientes" optionLabel="dniNombre"
+          optionValue="dni" placeholder="Seleccione un paciente"></p-dropdown>
+      </div>
+      <div class="p-field p-col-6 p-md-6">
+        <label for="especialidad">Especialidad</label>
+        <p-dropdown id="especialidad" formControlName="especialidad" [options]="especialidades"
+          placeholder="Seleccione una especialidad" optionLabel="nombre"></p-dropdown>
+      </div>
+      <div class="p-field p-col-6 p-md-6">
+        <label for="medico">Médico</label>
+        <p-dropdown id="medico" formControlName="medico" [options]="medicosFiltrados" placeholder="Seleccione un médico"
+          optionLabel="nombre" [disabled]="!especialidadSeleccionada"></p-dropdown>
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="fecha">Fecha</label>
+        <input id="fecha" type="date" pInputText formControlName="fecha" />
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="hora">Hora</label>
+        <input id="hora" type="time" pInputText formControlName="hora" />
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="motivo">Motivo</label>
+        <textarea id="motivo" pInputTextarea formControlName="motivo" rows="3"
+          placeholder="Ingrese el motivo u observaciones">
+        </textarea>
+      </div>
+
+      <div class="p-fluid p-formgrid p-grid">
+        <!-- Combo de tipos únicos -->
+        <div class="p-field p-col-12 p-md-4">
+          <label for="tipoLugar">Tipo de lugar</label>
+          <p-dropdown id="tipoLugar" formControlName="tipoLugar" [options]="tiposLugar"
+            placeholder="Seleccione un tipo">
+          </p-dropdown>
+        </div>
+
+        <!-- Combo de nombres según tipo -->
+        <div class="p-field p-col-12 p-md-4">
+          <label for="nombreLugar">Nombre del lugar</label>
+          <p-dropdown id="nombreLugar" formControlName="nombreLugar" [options]="nombresFiltrados" optionLabel="nombre"
+            optionValue="nombre" placeholder="Seleccione una sede" [disabled]="!tipoSeleccionado">
+          </p-dropdown>
+        </div>
+
+        <!-- Dirección solo lectura -->
+        <div class="p-field p-col-12 p-md-4">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" pInputText formControlName="direccion"
+            readonly placeholder="Dirección de la sede" />
+        </div>
+      </div>
+
+    </div>
+    <div class="botones-centrados p-field p-col-12 p-md-6">
+      <button pButton type="submit" label="Guardar" class="p-button-success" icon="pi pi-check"></button>
+      <button pButton type="button" label="Cancelar" class="p-button-secondary" icon="pi pi-times"
+        (click)="cancelar()"></button>
+    </div>
+
+
+  </form>
+</p-card>

@@ -1,0 +1,68 @@
+:host ::ng-deep .p-menu .p-menuitem-link .p-menuitem-text {
+    color: #000 !important;
+}
+:host ::ng-deep .p-menu .p-menuitem-link .p-menuitem-icon {
+    color: #000 !important;
+}
+:host ::ng-deep .p-menu .p-submenu-header{
+    color: #000 !important;
+    background: #0da350 !important;
+}
+:host ::ng-deep .p-menu{
+    background: #0da350 !important;
+}
+:host ::ng-deep .p-menu .p-menuitem-link:focus, 
+.p-menu .p-menuitem-link:hover{
+    background: white !important;
+}
+:host ::ng-deep .p-menu .p-menuitem-link:focus{
+    box-shadow: 0 0 0 0.1rem white !important;
+}
+
+:host ::ng-deep .layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+/* Encabezado más delgado */
+.header {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Footer más delgado también */
+.footer {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.4rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Cuerpo principal toma todo el espacio disponible */
+.layout-body {
+  flex: 1;
+  display: flex;
+  
+}
+
+/* Menú lateral fijo */
+.sidebar {
+  width: 230px;
+  background-color: #f4f4f4;
+  padding: 1rem;
+ 
+}
+
+/* Contenido central que se extiende y scrollable si hay mucho contenido */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+ 
+  background-color: #fff;
+}

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-citas
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-citas
+  template:
+    metadata:
+      labels:
+        app: ms-citas
+    spec:
+      containers:
+        - name: ms-citas
+          image: jonathan0284/trabajo-final:ms-citas-2.0
+          ports:
+            - containerPort: 9090
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "default"
